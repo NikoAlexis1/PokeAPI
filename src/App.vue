@@ -18,14 +18,19 @@ export default {
       this.pokemones = responses.map(response => {
         const pokemonData = response.data;
         return {
+          id: pokemonData.id,
           name: pokemonData.name,
           image: pokemonData.sprites.front_default,
+          discovered: false,
         };
       })
     },
+    aumentarContador(){
+      this.contador++;     
+    }
   },
   mounted() {
-    this.getPokemons()
+    this.getPokemons();
   },
   components: {
     Pokemon
@@ -40,7 +45,8 @@ export default {
     <p><strong>Pokemones descubiertos: {{ contador }}</strong> </p>
   </div>
   
-  <Pokemon :pokemones="pokemones"/>
+  <div class="pokemon">
+    <Pokemon v-for="(pokemon, i) in pokemones" :key="i" :pokemones="pokemon" id="Poke" @discovered="aumentarContador" />
+  </div>
+  
 </template>
-
-<style scoped></style>
