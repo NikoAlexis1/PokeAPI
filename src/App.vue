@@ -5,7 +5,8 @@ export default {
   data() {
     return {
       pokemonsUrl: [],
-      pokemones: []
+      pokemones: [],
+      contador: 0,
     }
   },
   methods: {
@@ -33,6 +34,12 @@ export default {
 </script>
 
 <template>
+  <div class="header">
+    <img id="logo" src="/src/assets/PokemonLogo.png" alt="">
+    <h1>¿Quien es ese Pokémon?</h1>
+    <p><strong>Pokemones descubiertos: {{ contador }}</strong> </p>
+  </div>
+  
   <Pokemon :pokemones="pokemones"/>
 </template>
 
