@@ -40,7 +40,7 @@ export default {
 
 <template>
   <div class="header">
-    <img id="logo" src="/src/assets/PokemonLogo.png" alt="">
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pokémon_logo.svg/2560px-International_Pokémon_logo.svg.png" alt="">
     <h1>¿Quien es ese Pokémon?</h1>
     <p><strong>Pokemones descubiertos: {{ contador }}</strong> </p>
   </div>
